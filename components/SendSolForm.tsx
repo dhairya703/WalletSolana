@@ -3,6 +3,7 @@ import * as web3 from '@solana/web3.js'
 import { LAMPORTS_PER_SOL } from '@solana/web3.js';
 import { FC, useState } from 'react'
 import styles from '../styles/Home.module.css'
+import bg from '../public/Background.jpg'
 
 
 export const SendSolForm: FC = () => {
@@ -39,7 +40,7 @@ export const SendSolForm: FC = () => {
                         <label htmlFor="amount">Amount (in SOL) to send:</label>
                         <input id="amount" type="text" className={styles.formField} placeholder="e.g. 0.1" required />
                         <br />
-                        <label htmlFor="recipient">Send SOL to:</label>
+                        <label htmlFor="recipient">Send SOL to (Enter User's PublicKey):</label>
                         <input id="recipient" type="text" className={styles.formField} placeholder="e.g. 4Zw1fXuYuJhWhu9KLEYMhiPEiqcpKd6akw3WRZCv84HA" required />
                         <button type="submit" className={styles.formButton}>Send</button>
                     </form> :

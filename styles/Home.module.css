@@ -8,13 +8,13 @@
 }
 
 .AppHeader {
-  height: 90px;
+  height: 80px;
   display: flex;
   background-color: black;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  font-size: 50px;
+  font-size: 25px;
   color: white;
   padding-left: 20px;
   padding-right: 20px;
@@ -22,7 +22,8 @@
 }
 
 .AppBody {
-  height: 100%;
+  background-image: url('../public/bg.jpg');
+  height: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,7 +31,11 @@
   font-size: calc(10px + 2vmin);
   color: white;
   padding-top: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
 
 .form {
   display: flex;
@@ -41,19 +46,42 @@
 .input {
   background: #f2f2f2;
 }
-
 .formField {
-  margin: 10px 0 10px 0;
+  margin: 10px 0;
   min-width: 500px;
   padding: 15px;
   font-size: 16px;
-  border: 0;
-  font-family: "Roboto", sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
+.formField:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);
+}
+
 .formButton {
   margin: 10px 0 10px 0;
   padding: 15px;
   font-size: 16px;
   border: 0;
   font-family: "Roboto", sans-serif;
+  background-color: #033;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 200px;
+}
+
+.formButton:hover {
+  background-color: #022;
+}
+
+.formButton:active {
+  background-color: #011;
 }
